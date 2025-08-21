@@ -22,6 +22,8 @@ $$
 
 Outra forma de representar é pensar nos inputs de modo diferente, utilizando uma matriz 3x3 onde as linhas representam as entradas de uma determinada camada e a coluna um neurônio, um elemento nessa matriz representa a entrada respectiva que um determinadno neurônio tem. ex: I[1][1] representa a entrada na camada 1 no neurônio 1., I[2][1] , a linha 2 representa as entraadas respectivas dos neurônios na camada 2.
 
+Os valores I32 e I33 Não são inicializados pois existem somente um neurônio no final.
+
 $$
 I =
 \begin{bmatrix}
