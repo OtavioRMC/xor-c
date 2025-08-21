@@ -2,6 +2,7 @@
   Author: Otávio Ribeiro Moreira da Costa
   XOR implemented in C.
   Without Backpropagation.
+  Compile with: gcc main.c main -lm
 */
 #include <stdio.h>
 #include <stdlib.h>
@@ -37,20 +38,20 @@ int main(){
 
   // inicializar pesos da primeira camada em relação ao neurônio 1.
   // [i -> Inputs][j -> 1 Neurônio da Hidden Layer ]
-  weights_layer_one[0][0] = -70.0f;
-  weights_layer_one[1][0] = -20.0f;
-  weights_layer_one[2][0] = 30.0f;
+  weights_layer_one[0][0] = 50.0f;
+  weights_layer_one[1][0] = 40.0f;
+  weights_layer_one[2][0] = -20.0f;
 
   // Inicializar pesos da primeira camada em relação ao neurônio 2.
   // Todas as ligações com o 2 neurônio da hidden layer.
-  weights_layer_one[0][1] = 90.0f;
-  weights_layer_one[1][1] = 40.0f;
-  weights_layer_one[2][1] = -20.0f;
+  weights_layer_one[0][1] = -60.0f;
+  weights_layer_one[1][1] = -30.0f;
+  weights_layer_one[2][1] = 70.0f;
 
   // Ligações da Camada 2 -> Output
-  weights_layer_two[0] = 50.0f;
-  weights_layer_two[1] = 40.0f;
-  weights_layer_two[2] = -55.0f;
+  weights_layer_two[0] = 70.0f;
+  weights_layer_two[1] = 90.0f;
+  weights_layer_two[2] = -130.0f;
 
   // Foward Pass inputs -> hidden layer
   for(int j = 0; j<2; j++){
@@ -72,7 +73,7 @@ int main(){
 
   double output = sigmoid(sum);
 
-  printf("Resultado da XOR = %.4f\n",output);
-  
+  printf("Resultado da XOR = %.2f\n",output);
+
   return 0;
 }
