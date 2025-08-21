@@ -1,0 +1,1 @@
+# Rede Neural (Multi Layer Perceptron) Implementada para resolver o problema da XOR
