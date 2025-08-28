@@ -14,7 +14,7 @@ int main(){
     float erro;
     int i,j,l;
     int cs;
-    int n;
+    int epochs = 0;
 
 
     do{
@@ -31,8 +31,7 @@ int main(){
     w2[1][0] = (rand()/2147483647.0)*40.0-20.0;
     w2[2][0] = (rand()/2147483647.0)*40.0-20.0;
 
-
-
+    epochs++;
 
 	erro=0.0;
     for(cs=0;cs<4;cs++){
@@ -69,6 +68,7 @@ int main(){
 
 	erro=erro/4.0;
     printf("Resultado: %f \n",erro );
+    printf("Resultado: %i\n",epochs);
 
     }while(erro>0.0001);
 
